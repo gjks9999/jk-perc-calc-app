@@ -1,0 +1,128 @@
+
+
+<div >
+
+    <div class="container head">
+        <div class="row">
+
+          <div class="col-12 text-center ">
+            <h3> <strong style="text-align: center; margin: auto text-info;"
+                class=" text-warning "
+
+                > Delta dynamic calculation </strong></h3>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col -5 text-center  ">
+            <strong>    Strike </strong>
+          </div>
+          <div class="col-7">
+            <input type="number"  class="numberinput" [(ngModel)]="strike">
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col -5 text-center ">
+                <strong>     Quantiy </strong>
+            </div>
+            <div class="col-7">
+              <input type="number"  class="numberinput" [(ngModel)]="qty">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col -5 text-center ">
+                <strong>   Delta </strong>
+            </div>
+            <div class="col-7">
+              <input type="number"  class="numberinput" [(ngModel)]="delta">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col -5 text-center ">
+                <strong>   N / B Change </strong>
+            </div>
+            <div class="col-7">
+              <input type="number"  class="numberinput" [(ngModel)]="nfchange">
+            </div>
+          </div>
+
+          <!-- old prim -->
+
+          <div class="row">
+
+            <div class="col -5 text-center centerindiv">
+                <strong>  <br><br>   Old premium   </strong>
+            </div>
+
+            <div class="col-7">
+          <div class="container  ">
+            <div class="row">
+                <div class="col-12">
+                    <input type="number"  class="numberinput" [(ngModel)]="oldPrimPoints"> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4>  <strong>   {{ oldPrimPoints * qty | currency:'INR':true}} </strong>   </h4>
+                </div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+ <!-- increase option  -->
+          <div class="row">
+
+            <div class="col -5 text-center centerindiv">
+                <strong>  <br><br> <br>  Increase option  </strong>
+            </div>
+
+            <div class="col-7">
+          <div class="container">
+            <div class="row">
+                <div class="col">
+                  <h2>  <strong [ngClass]="( delta * nfchange ) < 0 ? 'text-danger' : 'text-success'" 
+                    >   {{ delta * nfchange }} </strong>  </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                   <h2> <strong  [ngClass]="(  delta * nfchange  * qty ) < 0 ? 'text-danger' : 'text-success'"
+                    >    {{  delta * nfchange  * qty   | currency:'INR':true }}   </strong>   </h2>
+                    </div>
+            </div>
+          </div>
+          </div>
+          </div>          
+ 
+           <!--New opt prima -->
+           <div class="row">
+
+            <div class="col -5 text-center  ">
+                <strong> <br><br>   New option  premium </strong>
+            </div>
+
+            <div class="col-7">
+          <div class="container">
+            <div class="row">
+                <div class="col">
+                 <h4>   <strong   [ngClass]="( nfchange + ( delta * nfchange  ) ) < 0 ? 'text-danger' : 'text-success'"
+                    >   {{nfchange + ( delta * nfchange ) }} </strong> </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <h4>  <strong  [ngClass]="( nfchange + ( delta * nfchange  ) * qty ) < 0 ? 'text-danger' : 'text-success'"
+                    >    {{ ( nfchange + ( delta * nfchange )) * qty  | currency:'INR':true}} </strong> </h4>
+                    </div>
+            </div>
+          </div>
+          </div>
+          </div>    
+
+      </div>
+</div>
