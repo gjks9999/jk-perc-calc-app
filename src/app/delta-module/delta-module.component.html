@@ -67,7 +67,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <h4>  <strong>   {{ oldPrimPoints * qty | currency:'INR':true}} </strong>   </h4>
+                    <h4>  <strong>   {{ (oldPrimPoints * qty ) || 0  | currency:'INR':true}} </strong>   </h4>
                 </div>
             </div>
           </div>
@@ -86,13 +86,13 @@
             <div class="row">
                 <div class="col">
                   <h2>  <strong [ngClass]="( delta * nfchange ) < 0 ? 'text-danger' : 'text-success'" 
-                    >   {{ delta * nfchange }} </strong>  </h2>
+                    >   {{ delta * nfchange || 0 }} </strong>  </h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                    <h2> <strong  [ngClass]="(  delta * nfchange  * qty ) < 0 ? 'text-danger' : 'text-success'"
-                    >    {{  delta * nfchange  * qty   | currency:'INR':true }}   </strong>   </h2>
+                    >    {{  delta * nfchange  * qty || 0  | currency:'INR':true }}   </strong>   </h2>
                     </div>
             </div>
           </div>
@@ -111,13 +111,13 @@
             <div class="row">
                 <div class="col">
                  <h4>   <strong   [ngClass]="( nfchange + ( delta * nfchange  ) ) < 0 ? 'text-danger' : 'text-success'"
-                    >   {{nfchange + ( delta * nfchange ) }} </strong> </h4>
+                    >   {{ ( oldPrimPoints + ( delta * nfchange )) || 0 }}  </strong> </h4>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                   <h4>  <strong  [ngClass]="( nfchange + ( delta * nfchange  ) * qty ) < 0 ? 'text-danger' : 'text-success'"
-                    >    {{ ( nfchange + ( delta * nfchange )) * qty  | currency:'INR':true}} </strong> </h4>
+                    >    {{ ( oldPrimPoints + ( delta * nfchange )) * qty || 0 | currency:'INR':true}} </strong> </h4>
                     </div>
             </div>
           </div>

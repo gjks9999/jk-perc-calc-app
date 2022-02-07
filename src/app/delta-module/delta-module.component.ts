@@ -13,8 +13,8 @@ export class DeltaModuleComponent implements OnInit {
   strike : number;
   qty = 100;
   delta = 0.50;
-  nfchange = 0;
-  oldPrimPoints = 0 ;
+  nfchange : number;
+  oldPrimPoints : number ;
 
 
 
