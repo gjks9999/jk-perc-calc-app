@@ -1,0 +1,67 @@
+
+<br>
+
+<div class="container border">
+ 
+    <div class="row">
+
+        <div class="col-12 col-md-8 col-sm-12 col-lg-8 col-xl-8 ">
+
+            <div class="col-12">
+
+                <h3  class="text-center text-success font-weight-bold "> Stoploss calculater for Renko graphs </h3>
+    
+            </div>
+            <div class="row  m-2">
+
+            
+            <div class="col-6  text-center ">
+               <h5 class="text-center"> Enter Box size :  </h5> <input type="number"  class="numberinput" [(ngModel)]="boxsize">
+            </div> 
+     
+            <div class="col-6 text-center">
+                <h5 class="text-center"> Enter Open price : </h5>  <input type="number"  class="numberinput" [(ngModel)]="open">
+            </div>
+        </div>
+            <br>
+    
+            <!-- </div> -->
+        
+            
+            <div class="row m-2">
+        
+                <div class="col-6 border border-warning  rounded ">
+        
+                <h3 class="text-warning text-center ">STOPLOSS  </h3> 
+                    <br>
+                <h3 class="text-warning font-weight-bold text-center  ">
+                    {{open - (boxsize*2)}}
+                </h3> 
+        
+                </div>
+        
+        
+        
+                <div class="col-6 border border-danger  rounded ">
+        
+                    <h3 class="text-danger text-center">EXIT POINT  </h3> 
+                    <br>
+                <h3 class="text-danger font-weight-bold text-center  ">
+                    {{open - (boxsize*3)}}
+                </h3> 
+        
+                </div>
+            
+            </div>
+    </div>
+
+     
+<!-- img -->
+
+        <div class="col-4 border border-left d-none d-md-block">
+            <img class="img-fluid"  src="https://qph.fs.quoracdn.net/main-qimg-df5d1458009744683b3e19109204f707-lq" alt="">
+        </div>
+
+        
+</div>
+

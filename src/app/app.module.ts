@@ -7,12 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { DeltaModuleComponent } from './delta-module/delta-module.component';
 import { PercentageModuleComponent } from './percentage-module/percentage-module.component';
 import { RouterModule } from '@angular/router';
+import { StoplossComponent } from './stoploss/stoploss.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DeltaModuleComponent,
-    PercentageModuleComponent
+    PercentageModuleComponent,
+    StoplossComponent
   ],
   imports: [
     BrowserModule,
