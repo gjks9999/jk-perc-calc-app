@@ -10,6 +10,9 @@ export class StoplossComponent implements OnInit {
   boxsize = 2;
   open = 100;
 
+  boxsize1 = 2;
+  open1 = 100;
+
   constructor() { }
 
   ngOnInit() {

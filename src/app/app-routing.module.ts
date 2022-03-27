@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '',   redirectTo: '/delta', pathMatch: 'full' },
   { path: 'delta', component: DeltaModuleComponent },
   { path: 'percentage', component: PercentageModuleComponent },
-  { path: 'stoploss', component: StoplossComponent }
+  { path: 'stoploss-buyback', component: StoplossComponent }
 
 ];
 

@@ -1,15 +1,18 @@
 
 <br>
 
-<div class="container border">
+<div class="container border border-2  border-dark">
  
     <div class="row">
 
-        <div class="col-12 col-md-8 col-sm-12 col-lg-8 col-xl-8 ">
+        <div class="col-12  ">
 
             <div class="col-12">
 
-                <h3  class="text-center text-success font-weight-bold "> Stoploss calculater for Renko graphs </h3>
+                <br>
+
+                <h3  class="text-center text-danger font-weight-bold ">  Renko buying side calculater </h3>
+                <br>
     
             </div>
             <div class="row  m-2">
@@ -30,7 +33,7 @@
             
             <div class="row m-2">
         
-                <div class="col-6 border border-warning  rounded ">
+                <div class="col-5 border border-warning  rounded  m-auto ">
         
                 <h3 class="text-warning text-center ">STOPLOSS  </h3> 
                     <br>
@@ -42,7 +45,7 @@
         
         
         
-                <div class="col-6 border border-danger  rounded ">
+                <div class="col-5 border border-danger  rounded ">
         
                     <h3 class="text-danger text-center">EXIT POINT  </h3> 
                     <br>
@@ -58,9 +61,82 @@
      
 <!-- img -->
 
-        <div class="col-4 border border-left d-none d-md-block">
+        <!-- <div class="col-4 border border-left d-none d-md-block">
             <img class="img-fluid"  src="https://qph.fs.quoracdn.net/main-qimg-df5d1458009744683b3e19109204f707-lq" alt="">
+        </div> -->
+
+        
+</div>
+
+<br>
+
+<!-- Buy back module  -->
+
+<br>
+
+<div class="container ">
+ 
+    <div class="row">
+
+        <div class="col-12 ">
+
+            <div class="col-12">
+
+
+
+                <h3  class="text-center text-success font-weight-bold  "> Renko selling side calculater </h3>
+                <br>
+    
+            </div>
+            <div class="row  m-2">
+
+            
+            <div class="col-6  text-center ">
+               <h5 class="text-center "> Enter Box size :  </h5> <input type="number"  class="numberinput " [(ngModel)]="boxsize" disabled>
+            </div> 
+     
+            <div class="col-6 text-center">
+                <h5 class="text-center"> Enter Open price : </h5>  <input type="number"  class="numberinput" [(ngModel)]="open1">
+            </div>
         </div>
+            <br>
+    
+            <!-- </div> -->
+        
+            
+            <div class="row m-2">
+        
+                <div class="col-5 border border-warning  rounded  m-auto">
+        
+                <h3 class="text-warning text-center ">Range start  </h3> 
+                    <br>
+                <h3 class="text-warning font-weight-bold text-center  ">
+                    {{open1 + (boxsize*2)}}
+                </h3> 
+        
+                </div>
+        
+        
+        
+                <div class="col-5 border border-success  rounded ">
+        
+                    <h3 class="text-success text-center">Range end </h3> 
+                    <br>
+                <h3 class="text-success font-weight-bold text-center  ">
+                    {{open1 + (boxsize*3)}}
+                </h3> 
+        
+                </div>
+            
+            </div>
+    </div>
+
+     
+<!-- img -->
+
+        <!-- <div class="col-4 border border-left d-none d-md-block">
+            <img class="img-fluid"  src="https://qph.fs.quoracdn.net/main-qimg-df5d1458009744683b3e19109204f707-lq" alt="">
+        </div> -->
 
         
 </div>
